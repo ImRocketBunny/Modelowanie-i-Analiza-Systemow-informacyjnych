@@ -1,0 +1,62 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+
+        <property name="connection.driver_class">org.h2.Driver</property>
+<!--        <property name="connection.url">jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1;MVCC=TRUE</property>-->
+        <property name="connection.url">jdbc:h2:~/db-test.h2</property>
+        <!--<property name="connection.url">jdbc:h2:tcp://localhost/~/db-test.h2</property>-->
+        <property name="connection.username">sa</property>
+        <property name="connection.password">sa</property>
+<!--        <property name="connection.driver_class">org.h2.Driver</property>-->
+<!--        <property name="connection.url">jdbc:h2:~/db-test.h2</property>-->
+<!--        <property name="connection.username">sa</property>-->
+<!--        <property name="connection.password">sa</property>-->
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+
+        <!-- Echo all executed SQL to stdout -->
+         <property name="show_sql">true</property>
+
+        <!--Drop and re-create the database schema on startup-->
+<!--   <property name="hbm2ddl.auto">create</property>-->
+
+        <!-- Enable Hibernate stats in the logs -->
+        <property name="hibernate.generate_statistics">false</property>
+
+        <!-- Full names the annotated entity class -->
+
+        <mapping class="Models.Klient"/>
+        <mapping class="Models.Osoba"/>
+        <mapping class="Models.Pracownik"/>
+        <mapping class="Models.KlientFirma"/>
+        <mapping class="Models.KlientPrywatny"/>
+        <mapping class="Models.SpecjalistaDsReklamacji"/>
+        <mapping class="Models.DoradcaKlienta"/>
+        <mapping class="Models.Magazynier"/>
+        <mapping class="Models.PodzespolWzamowieniu"/>
+        <mapping class="Models.PodzespolKomputerowy"/>
+        <mapping class="Models.Procesor"/>
+        <mapping class="Models.KartaGraficzna"/>
+        <mapping class="Models.PlytaGlowna"/>
+        <mapping class="Models.Pytanie"/>
+        <mapping class="Models.Odpowiedz"/>
+        <mapping class="Models.Zamowienie"/>
+        <mapping class="Models.Reklamacja"/>
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
