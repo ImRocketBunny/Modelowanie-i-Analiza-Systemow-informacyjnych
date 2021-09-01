@@ -33,5 +33,5 @@ automatyczne tworzenie poł. zwrotnego)
 • Xor
 • Ograniczenie Własne
 
-#Projekt
+# Projekt
 [Projekt](http://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-informacje-stacjonarne.pdf)
